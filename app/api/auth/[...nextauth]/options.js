@@ -9,7 +9,7 @@ export const options = {
                     console.log("Profile Github: ", profile);
 
                     let userRole = "Github  User";
-                    if(profile?.email === "aap9002@gmail.com"){
+                    if(profile?.email.toLowerCase() === "aap9002@gmail.com"){
                         userRole = "admin"
                     }
 
@@ -26,6 +26,7 @@ export const options = {
             {
                 profile(profile){
                     console.log("Profile Google: ", profile);
+                    const userRole = "Google User";
 
                     return {
                         ...profile,
